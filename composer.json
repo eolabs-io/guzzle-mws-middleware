@@ -1,0 +1,43 @@
+{
+    "name": "eolabs/guzzle-mws-middleware",
+    "description": "A Amazon MWS middleware for Guzzle",
+    "keywords": [
+        "eolabs",
+        "guzzle-mws-middleware"
+    ],
+    "homepage": "https://github.com/eolabs/guzzle-mws-middleware",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tim Hall",
+            "email": "thall@eolabs.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EoLabs\\GuzzleMwsMiddleware\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EoLabs\\GuzzleMwsMiddleware\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
