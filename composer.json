@@ -1,11 +1,11 @@
 {
-    "name": "eolabs/guzzle-mws-middleware",
+    "name": "eolabs-io/guzzle-mws-middleware",
     "description": "A Amazon MWS middleware for Guzzle",
     "keywords": [
-        "eolabs",
+        "eolabs-io",
         "guzzle-mws-middleware"
     ],
-    "homepage": "https://github.com/eolabs/guzzle-mws-middleware",
+    "homepage": "https://github.com/eolabs-io/guzzle-mws-middleware",
     "license": "MIT",
     "type": "library",
     "authors": [
