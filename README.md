@@ -18,7 +18,15 @@ composer require eolabs/guzzle-mws-middleware
 ## Usage
 
 ``` php
-// Usage description here
+$mwsMiddleware = AmazonMwsMiddleware::withSecretKey('testSecret');
+
+$handlerStack = HandlerStack::create($mock);
+$handlerStack->push($mwsMiddleware);
+
+$base_uri = "https://mws.amazonservices.com";
+$this->client = new Client(['handler' => $handlerStack, 'base_uri' => $base_uri]);
+
+$this->client->post('/Feeds/2009-01-01', ['form_params' => ['merchantId' => '']]);
 ```
 
 ### Testing
