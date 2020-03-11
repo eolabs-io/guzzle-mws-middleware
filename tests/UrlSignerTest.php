@@ -9,7 +9,7 @@ use Psr\Http\Message\RequestInterface;
 class UrlSignerTest extends TestCase
 {
     /** @var string */
-    protected $expectedSignature = 'OupQxSjIAJfjtUy9uBU4HBLIgvtkO3MeNgmfirAc13A=';
+    protected $expectedSignature = 'In90QEX744ClQsPbDvVME5rGaWRYoZ3Wuj1SAEegVEM=';
 
 
     public function setUp()

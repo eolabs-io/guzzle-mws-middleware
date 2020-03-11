@@ -42,8 +42,8 @@ abstract class TestCase extends BaseTestCase
         $base_uri = "https://mws.amazonservices.com";
         $this->client = new Client(['handler' => $handlerStack, 'base_uri' => $base_uri]);
 
-        $this->client->post('/Feeds/2009-01-01', ['form_params' => $this->getFormParams()]);
-        $this->client->post('/Feeds/2009-01-01', ['form_params' => $this->getFormParams(['Timestamp' => ''])]);
+        $this->client->post('FulfillmentInventory/2009-01-01', ['form_params' => $this->getFormParams()]);
+        $this->client->post('FulfillmentInventory/2009-01-01', ['form_params' => $this->getFormParams(['Timestamp' => ''])]);
     }
 
     public function getFormParams(array $params = []) : array

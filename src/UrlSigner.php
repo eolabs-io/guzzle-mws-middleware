@@ -24,7 +24,7 @@ class UrlSigner
     					  ->signRequest();
 
 	    $method = $this->getMethod();
-	    $uri  = $this->getPath(); 
+	    $uri  = $this->getUri(); 
 	    $headers = $this->getHeaders(); 
 	    $body = $this->getBody( ['Signature' => $signature] );
 
@@ -105,32 +105,37 @@ class UrlSigner
     	return $this;
     }
 
-    public function getSecret() : string
+    public function getSecret(): string
     {
     	return $this->secret;
     }
 
-    public function getHeaders() : array
+    public function getHeaders(): array
     {
     	return $this->getRequest()->getHeaders();
     }
 
-    public function getMethod() : string
+    public function getMethod(): string
     {
     	return $this->getRequest()->getMethod();
     }
 
-    public function getHost() : string
+    public function getUri(): Psr7\Uri
+    {
+        return $this->getRequest()->getUri();
+    }
+
+    public function getHost(): string
     {
     	return $this->getRequest()->getUri()->getHost();
     }
 
-    public function getPath() : string
+    public function getPath(): string
     {
     	return $this->getRequest()->getUri()->getPath();
     }
 
-    public function getBody($parameters = []) : string
+    public function getBody($parameters = []): string
     {
     	$body = (string) $this->getRequest()->getBody();
 
